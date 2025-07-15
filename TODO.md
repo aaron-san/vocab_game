@@ -2,3 +2,8 @@
 2. Make sure score doesn't go outsidie score box
 3. Set up backend that connects to Vercel serverless function
 4. Store user credentials, session data and stats
+
+
+- Add Alphabet case matching drag and drop game
+- Add alphabet puzzles
+- Add rankings page

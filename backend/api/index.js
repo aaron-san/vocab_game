@@ -1,8 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import createUserRouter from './routes/createUser.js';
-import loginRouter from './routes/login.js';
+import createUserRouter from './user/create.js';
+import loginRouter from './auth/login.js';
 
 dotenv.config();
 
@@ -17,6 +17,8 @@ app.use('/api/createUser', createUserRouter);
 app.use('/api/login', loginRouter);
 
 // Start server
-app.listen(4000, () => {
-  console.log('Backend running on port 4000');
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log(`Backend running on port ${PORT}`);
 });
