@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+
+}
+
+datasource db {
+  provider = "sqlite" // or mysql/sqlite/postgresql
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id        String   @id @default(cuid())  // Primary key
+  username  String   @unique
+  password  String
+  stats     Stat?   // One-to-one relationship
+}
+
+model Stat {
+  id                  String   @id @default(cuid())
+  userId              String   @unique // Foreign key pointing to User.id
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)  // Prisma connection to fetch linked User
+  totalWords          Int
+  totalTime           Float
+  timePlayed          Float
+  wordsPlayed         Int
+  totalPoints         Int
+  pointsEarned        Int
+  wordsPerMinute      Int      // Or, Float
+  createdAt           DateTime @default(now())
+  lastLogin           DateTime @default(now())
+}
