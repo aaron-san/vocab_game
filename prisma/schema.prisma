@@ -28,13 +28,13 @@ model Stat {
   id                  String   @id @default(cuid())
   userId              String   @unique // Foreign key pointing to User.id
   user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)  // Prisma connection to fetch linked User
-  totalWords          Int
-  totalTime           Float
-  timePlayed          Float
-  wordsPlayed         Int
-  totalPoints         Int
-  pointsEarned        Int
-  wordsPerMinute      Int      // Or, Float
+  totalWords          Int   @default(0)
+  totalTime           Float    @default(0)
+  timePlayed          Float    @default(0)
+  wordsPlayed         Int   @default(0)
+  totalPoints         Int   @default(0)
+  pointsEarned        Int   @default(0)
+  wordsPerMinute      Int      @default(0)  // Or, Float
   createdAt           DateTime @default(now())
   lastLogin           DateTime @default(now())
 }

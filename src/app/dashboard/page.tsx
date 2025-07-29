@@ -5,13 +5,7 @@ import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-
-type Stats = {
-  totalPoints?: number;
-  wordsPerMinute?: number;
-  totalWords?: number;
-  totalTime?: number;
-};
+import type { Stats } from "@/types/stats";
 
 export default function UserStats() {
   const { data: session, status } = useSession();
@@ -30,7 +24,7 @@ export default function UserStats() {
     const res = await fetch("/api/stats/fetch");
     if (res.ok) {
       const data = await res.json();
-      console.log("Fetched stats:", data);
+      // console.log("Fetched stats:", data);
       setStats(data);
     }
   };

@@ -4,14 +4,20 @@ import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
 import { MIN_PASSWORD_LENGTH } from "@/utils/constants";
+import Spinner from "@/components/Spinner";
+import { useSession } from "next-auth/react";
 
 export default function SignIn() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState<string[]>([]);
 
+  const { data: session, status } = useSession();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (status === "loading") return <Spinner />;
     const validationErrors = [];
 
     if (!username.trim()) validationErrors.push("ユーザー名は必須です。");

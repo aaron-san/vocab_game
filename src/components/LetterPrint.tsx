@@ -1,11 +1,13 @@
 import React from "react";
 
-type Props = {
-  letter: string;
+type Props = { letter: string };
+
+const LetterPrint = ({ letter }: Props) => {
+  return (
+    <div className="flex justify-center items-center w-8 h-10 font-bold text-gray-500 text-4xl">
+      {letter}
+    </div>
+  );
 };
 
-const LetterInput = ({ letter }: Props) => {
-  return <div className="p-2 w-10 h-10 text-center">{letter}</div>;
-};
-
-export default LetterInput;
+export default LetterPrint;

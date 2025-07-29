@@ -11,7 +11,7 @@ export const FIFTH_GRADE_TOPICS = [
   },
   {
     jp: "食べ物",
-    en: "food",
+    en: "foods",
   },
   {
     jp: "月",
@@ -51,7 +51,7 @@ export const FIFTH_GRADE_TOPICS = [
   },
   {
     jp: "性格など",
-    en: "personality traits",
+    en: "character",
   },
 ];
 
@@ -62,7 +62,7 @@ export const SIXTH_GRADE_TOPICS = [
   },
   {
     jp: "したこと",
-    en: "things done",
+    en: "past tense",
   },
   {
     jp: "自然",

@@ -4,23 +4,42 @@ import LetterPrint from "./LetterPrint";
 
 type Props = {
   word: string;
-  inputRef?: React.RefObject<HTMLInputElement>;
+  letterIndex: number;
+  typedLetters: string[];
+  setTypedLetter: (index: number, letter: string) => void;
+  advanceIndex: () => void;
 };
 
-const WordInputs = ({ word, inputRef }: Props) => {
+const WordInputs = ({
+  word,
+  letterIndex,
+  typedLetters,
+  setTypedLetter,
+  advanceIndex,
+}: Props) => {
   return (
-    <div className="mt-2">
-      <div className="flex space-x-1">
+    <div className="space-y-1 mt-4">
+      {/* Printed letters */}
+      <div className="flex justify-center items-center space-x-1">
         {word.split("").map((letter, index) => (
           <LetterPrint key={index} letter={letter} />
         ))}
       </div>
-      <div className="flex space-x-1">
+      <div className="flex justify-center space-x-1">
         {word.split("").map((letter, index) => (
-          <LetterInput key={index} inputRef={inputRef} />
+          <LetterInput
+            key={index}
+            letter={letter}
+            index={index}
+            letterIndex={letterIndex}
+            typedLetter={typedLetters[index] || ""}
+            setTypedLetter={setTypedLetter}
+            advanceIndex={advanceIndex}
+          />
         ))}
       </div>
     </div>
   );
 };
+
 export default WordInputs;

@@ -13,7 +13,7 @@
       "swimming pool",
       "teachers office"
     ],
-    "dailyactivities": [
+    "daily_life": [
       "brush my teeth",
       "do my homework",
       "get the newspaper",
@@ -126,7 +126,7 @@
       "thirsty",
       "tired"
     ],
-    "schoolevents": [
+    "school_events": [
       "chorus contest",
       "drama festival",
       "entrance ceremony",
@@ -141,7 +141,7 @@
       "swimming meet",
       "volunteer day"
     ],
-    "actions1": [
+    "actions_1": [
       "bake",
       "buy",
       "drink",
@@ -168,7 +168,7 @@
       "turn",
       "write"
     ],
-    "actions2": [
+    "actions_2": [
       "enjoy",
       "get",
       "have",
@@ -200,7 +200,7 @@
       "November",
       "December"
     ],
-    "annualevents": [
+    "annual_events": [
       "April Fools Day",
       "birthday",
       "Childrens Day",
@@ -212,7 +212,7 @@
       "New Years Eve",
       "Star Festival"
     ],
-    "pasttense": ["ate", "enjoyed", "had", "saw", "went"],
+    "past_tense": ["ate", "enjoyed", "had", "saw", "went"],
     "nature": [
       "desert",
       "flower",

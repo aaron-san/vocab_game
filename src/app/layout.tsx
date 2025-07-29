@@ -1,9 +1,12 @@
 "use client";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import { Geist, Geist_Mono, Orbitron } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { SessionProvider } from "next-auth/react";
+import Link from "next/link";
+import { useSession } from "next-auth/react";
+import Spinner from "@/components/Spinner";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -31,18 +34,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // const { data: session, status } = useSession();
   return (
     <html
       lang="en"
       // className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable}`}
       className={`${orbitron.variable}`}
     >
-      <body className="flex flex-col justify-center items-center bg-[rgb(199,239,245)] min-h-screen text-primary antialiased">
+      <body className="flex flex-col bg-[rgb(199,239,245)] min-h-screen text-primary antialiased">
         <SessionProvider>
           <header className="">
             <Header />
           </header>
-          <main className="flex-1 mt-10 px-4 py-8 w-full max-w-4xl">
+          {/* {status === "loading" ? (
+            <Spinner />
+          ) : ( */}
+          <main className="flex-1 mt-10 p-4 w-full max-w-4xl">
+            <div className="flex justify-center gap-4 mx-4 text-sm">
+              <Link
+                href="/gamemenu"
+                className="text-blue-500 text-center hover:underline"
+              >
+                ゲームメニュー
+              </Link>
+              <Link
+                href="/leaderboard"
+                className="text-blue-500 text-center hover:underline"
+              >
+                リーダーボードを見る
+              </Link>
+            </div>
             {children}
           </main>
         </SessionProvider>

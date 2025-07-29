@@ -2,6 +2,9 @@
 pnpm add -D prisma
 pnpx prisma init
 pnpx prisma generate
+
+# Inspect database
+pnpx prisma studio
 ```
 
 ## Prisma
