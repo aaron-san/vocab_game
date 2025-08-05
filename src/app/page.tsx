@@ -12,7 +12,7 @@ export default function Home() {
 
   if (status === "loading") {
     return (
-      <div className="flex justify-center w-screen h-screen">
+      <div className="flex justify-center w-full h-screen">
         <Spinner />
       </div>
     );

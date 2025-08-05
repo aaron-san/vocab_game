@@ -1,15 +1,10 @@
-export default {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}", "./index.html"],
   theme: {
     extend: {
-      colors: {
-        primary: "#666",
-        secondary: "#14171A",
-        accent: "#657786",
-        brandGreen: "#00FF7F",
-        backdrop: "rgba(0, 0, 0, 0.5)",
-      },
-
+      
       spacing: {
         72: "18rem",
         84: "21rem",
@@ -51,3 +46,5 @@ export default {
   },
   plugins: [],
 };
+
+export default config;

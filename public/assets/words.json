@@ -1,5 +1,15 @@
 {
   "data": {
+    "colors": [
+      "blue",
+      "orange",
+      "white",
+      "black",
+      "brown",
+      "green",
+      "purple",
+      "yellow"
+    ],
     "school": [
       "classroom",
       "entrance",
@@ -236,6 +246,7 @@
       "gentle",
       "kind",
       "strong"
-    ]
+    ],
+    "bugs": ["ant", "butterfly", "grasshopper", "spider"]
   }
 }

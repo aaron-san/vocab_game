@@ -13,7 +13,8 @@ const Header = (props: Props) => {
 
   // if (status === "loading") return <p>Loading...</p>;
   return (
-    <div className="top-0 left-0 z-max absolute flex justify-between bg-stone-100 shadow-lg mb-20 px-4 py-2 w-full font-orbitron text-slate-700 text-xl">
+    // <div className="top-0 left-0 z-max absolute flex justify-between bg-stone-100 shadow-lg mb-20 px-4 py-2 w-full font-orbitron text-slate-700 text-xl">
+    <div className="top-0 left-0 z-max absolute flex justify-between bg-stone-800 shadow-lg mb-20 px-4 py-2 w-full font-orbitron text-stone-50 text-xl">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -2,6 +2,10 @@ export const MIN_PASSWORD_LENGTH = 4;
 
 export const FIFTH_GRADE_TOPICS = [
   {
+    jp: "色",
+    en: "colors",
+  },
+  {
     jp: "スポーツ",
     en: "sports",
   },
@@ -57,6 +61,10 @@ export const FIFTH_GRADE_TOPICS = [
 
 export const SIXTH_GRADE_TOPICS = [
   {
+    jp: "道案内",
+    en: "navigation",
+  },
+  {
     jp: "動物",
     en: "animals",
   },
@@ -83,5 +91,9 @@ export const SIXTH_GRADE_TOPICS = [
   {
     jp: "学校行事",
     en: "school events",
+  },
+  {
+    jp: "虫",
+    en: "bugs",
   },
 ];
